@@ -1,0 +1,24 @@
+{
+  "name": "book-management-system",
+  "version": "1.0.0",
+  "description": "Book management System using Node.js & Javascript technologies",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NarendraVanjarii/Book-Management-System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NarendraVanjarii/Book-Management-System/issues"
+  },
+  "homepage": "https://github.com/NarendraVanjarii/Book-Management-System#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.2.0"
+  }
+}
