@@ -99,8 +99,8 @@ services.use('/', router);
   }
 
 // server starter
-const port = process.env.PORT ?? 8000;
+const port = process.env.PORT;
 services.listen(port, () => {
-    console.log(`services started on port ${8000}`);
+    console.log(`services started on port ${port}`);
 })
 
