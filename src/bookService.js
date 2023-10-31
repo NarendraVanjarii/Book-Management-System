@@ -10,7 +10,7 @@ services.use('/', router);
 
 // Http calls
 
- export async function listBooks(){
+ export async function getAllBooks(){
     const client =await getClient();
     try {
       const database = client.db('BookManagementDB'); 
@@ -19,7 +19,28 @@ services.use('/', router);
       console.log(`Book Records Received`);
       return result;
     } catch (err) {
-      console.error('Error listing books:', err);
+      console.error('Error getting books:', err);
+      throw err;
+    } finally{
+      client.close();
+    }
+  }
+
+  export async function getBookByBookId(bookId){
+    const client =await getClient();
+    try {
+      const database = client.db('BookManagementDB'); 
+      const collection = database.collection('BookManagementCollections');
+      const filter = {_id : new ObjectId(bookId)}
+      const result = await collection.findOne(filter);
+      if(result){
+        console.log(`Book Records Received`);
+        return result;
+      } else{
+        console.log('Book Record is not Present');
+      }
+    } catch (err) {
+      console.error('Error getting book:', err);
       throw err;
     } finally{
       client.close();

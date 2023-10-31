@@ -1,12 +1,24 @@
 import express from 'express';
-import { addBook, listBooks, updateBook , deleteBook } from './bookService.js';
+import { addBook, getBookByBookId, getAllBooks, updateBook , deleteBook } from './bookService.js';
 
 const router = express.Router();
 
 // List all books
-router.get('/api/books', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const books = await listBooks();
+    const books = await getAllBooks();
+    res.json(books);
+  } catch (err) {
+    console.error('Error listing books:', err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// list book by id
+router.get('/api/books/:bookId', async (req, res) => {
+  try {
+    const bookId = req.params.bookId;
+    const books = await getBookByBookId(bookId);
     res.json(books);
   } catch (err) {
     console.error('Error listing books:', err);
