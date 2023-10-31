@@ -15,10 +15,10 @@ https://web.postman.co/workspace/My-Workspace~4c43ba20-7e70-4000-85b6-f41ed817ec
 
 CRUD operations: API's list:
 
-Add a new book (title, author, summary) = https://book-management-apis.onrender.com/
-View a list of all books =  https://book-management-apis.onrender.com/ 
-View details of a specific book by its ID = https://book-management-apis.onrender.com/[REPLACE_WITH_BOOK_ID]  
-Ex. bookID = 653fc2b699e5aaf5d242200a
-Update a book's details = https://book-management-apis.onrender.com/[REPLACE_WITH_BOOK_ID] 
-Delete a book = https://book-management-apis.onrender.com/[REPLACE_WITH_BOOK_ID] 
+- Add a new book (title, author, summary) = https://book-management-apis.onrender.com/
+- View a list of all books =  https://book-management-apis.onrender.com/ 
+- View details of a specific book by its ID = https://book-management-apis.onrender.com/[REPLACE_WITH_BOOK_ID]  
+- Ex. bookID = 653fc2b699e5aaf5d242200a
+- Update a book's details = https://book-management-apis.onrender.com/[REPLACE_WITH_BOOK_ID] 
+- Delete a book = https://book-management-apis.onrender.com/[REPLACE_WITH_BOOK_ID] 
 
