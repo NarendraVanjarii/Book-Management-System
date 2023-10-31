@@ -2,6 +2,8 @@ import express from 'express';
 import { router } from './bookRoutes.js'; 
 import { getClient } from './databaseConnection.js';
 import { ObjectId } from 'mongodb';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const services = express();
 
@@ -97,7 +99,7 @@ services.use('/', router);
   }
 
 // server starter
-const port = process.env.PORT || 8000;
+const port = process.env.PORT ?? 8000;
 services.listen(port, () => {
     console.log(`services started on port ${8000}`);
 })
