@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 });
 
 // list book by id
-router.get('/api/books/:bookId', async (req, res) => {
+router.get('/:bookId', async (req, res) => {
   try {
     const bookId = req.params.bookId;
     const books = await getBookByBookId(bookId);
@@ -27,7 +27,7 @@ router.get('/api/books/:bookId', async (req, res) => {
 });
 
 // Add a new book
-router.post('/api/books', async (req, res) => {
+router.post('/', async (req, res) => {
   const newBook = req.body;
   try {
     const result = await addBook(newBook);
@@ -39,7 +39,7 @@ router.post('/api/books', async (req, res) => {
 });
 
 // Update a book
-router.put('/api/books/:bookId', async (req, res) => {
+router.put('/:bookId', async (req, res) => {
   const bookId = req.params.bookId;
   const updatedBook = req.body;
   try {
@@ -53,7 +53,7 @@ router.put('/api/books/:bookId', async (req, res) => {
 });
 
 // Delete a book
-router.delete('/api/books/:bookId', async (req, res) => {
+router.delete('/:bookId', async (req, res) => {
   const bookId = req.params.bookId;
   try {
     // Implement the deleteBook function in service.js
